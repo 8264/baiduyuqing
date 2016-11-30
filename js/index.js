@@ -13,10 +13,11 @@ $(function(){
             return;
         }
         num++;
-        if(num==$(".part").length){
-            num=$(".part").length-1;
+        if(num==$("section").length){
+            num=$("section").length-1;
+            return;
         }
-        flag=true;
+        flag=false;
 
         $("#fullpage").css("margin-top",-num*clientH);
     });
@@ -28,13 +29,13 @@ $(function(){
         num--;
         if(num==-1){
           num=0;
+            return;
         }
         flag=false;
-
         $("#fullpage").css("margin-top",-num*clientH);
     });
 
     $("#fullpage")[0].addEventListener("webkitTransitionEnd",function(){
         flag=true;
-    })
+    });
 })
