@@ -1,0 +1,36 @@
+@keyframes menu{
+    0%{
+        opacity:0;
+        transform: rotateX(90deg);
+    }
+    100%{
+        opacity:1;
+        transform:rotateX(0deg);
+    }
+}
+@keyframes menu1{
+    0%{
+        opacity:1;
+        transform:rotateX(0deg);
+    }
+    100%{
+        opacity:0;
+        transform:rotateX(-90deg);
+    }
+}
+@keyframes plane {
+    0%{
+       transform:translate(0,-10px);
+    }
+    100%{
+        transform:translate(0,0px);
+    }
+}
+@keyframes cloud{
+    0%{
+        transform: translate(100%,0);
+    }
+    100%{
+        transform: translate(-100%,0);
+    }
+}
