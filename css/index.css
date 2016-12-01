@@ -5,10 +5,26 @@ html,body{
 *{
     box-sizing: border-box;
     font-family: "微软雅黑";
+    color:white;
 }
 a{
-    color:white;
     text-decoration: none;
+}
+h4{
+    font-size: 34px;
+    font-weight: 400;
+    float:left;
+    margin-top:10px;
+    margin-left: 18px;
+}
+p{
+    font-size: 16px;
+    font-weight:bold;
+    color:rgba(255,255,255,.7);
+    float:left;
+    margin-top:-68px;
+    margin-left:84px;
+    line-height:30px;
 }
 .header{
     width:100%;height:60px;
@@ -71,25 +87,31 @@ a{
 #fullpage{
     width:100%;height:400%;
     transition: margin-top 1s ease;
+    margin:0 auto;
 }
 section{
     width:100%;height:25%;
     position:relative;
+    margin:0 auto;
 }
 section:nth-child(1){
-   background:url("../img/bg0.jpg") no-repeat 100% 100%;
+   background:url("../img/bg0.jpg") ;
+    background-size: cover;
 }
 .mask{
     width:100%;height:126px;position:absolute;bottom:0;left:0;background:url("../img/bg1.jpg") no-repeat;
 }
 section:nth-child(2){
-    background:url("../img/bg1.jpg") no-repeat 100% 100%;
+    background:url("../img/bg1.jpg") ;
+    background-size:cover;
 }
 section:nth-child(3){
-    background:url("../img/bg2.jpg") no-repeat 100% 100%;
+    background:url("../img/bg2.jpg")  ;
+    background-size: cover;
 }
 section:nth-child(4){
-    background:url("../img/bg3.jpg") no-repeat 100% 100%;
+    background:url("../img/bg3.jpg") ;
+    background-size: cover;
 }
 @media screen and (min-width: 1000px){
     .min{
@@ -123,13 +145,6 @@ section:nth-child(4){
     .box a:nth-of-type(8) {
         color:#ffda28;
     }
-    #fullpage{
-        width:100%;height:400%;
-        transition: margin-top 1s ease;
-    }
-    section{
-        width:100%;height:25%;
-    }
     section:nth-child(1) .first-head{
         width:501px;height:158px;background:url("../img/launch.png") no-repeat;
         position:absolute;top:22%;left:14%;
@@ -143,8 +158,7 @@ section:nth-child(4){
         width:346px;height:304px;background:url("../img/form.png");
     }
     .ship{
-        position:absolute;background:url("../img/ship.png") no-repeat;width:242px;height:228px;
-        left:22%;top:-152%;
+        position:absolute;left:22%;top:-152%;background:url("../img/ship.png") no-repeat;width:242px;height:228px;animation:ship 1s ease forwards;
     }
     .cloud{
         width:100%;height:100%;
@@ -172,5 +186,85 @@ section:nth-child(4){
     .hill3{
         width:260px;height:175px;background:url("../img/hill3.png") no-repeat;position:absolute;right:8%;top:-38%;
     }
+    .part{
+        width:428px;height:134px;position:absolute;left:16%;top:30%;z-index: 1;
+    }
+    .lingxian{
+        width:66px;height:100%;  float:left;animation:rotate 1.5s ease infinite;
+    }
+    .rpart{
+        width:444px;height:427px;
+        position:absolute;top:20%;right:16%;
+    }
+    .rect-box{
+        width:100%;
+       position:absolute;bottom:0;left:18%;
+    }
+    .rect{
+        width:44px;height:44px;background:#35B568;
+        float:left;
+        margin-left:15px;margin-top:44px
+    }
+    .rect:nth-child(2){
+        width:88px;height:88px;background:#4AC179;margin-top:0px;margin-left:44px;
+    }
+    .rect:nth-child(3){
+        background:#8AE75A;
+        margin-left:0px;
+    }
+    .rect:nth-child(4){
+        background:#8AE75A;
+        margin-left:308px;
+    }
+    .rect:nth-child(5){
+         background:#4AC179;margin-left:44px;
+     }
+   .half-circle{
+       width:100%;height:138px;
+       position:absolute;bottom:0px;left:0;background:url("../img/bg-3-head.png");
+   }
+    .square-box{
+        width:362px;height:360px;position:absolute;
+        top:8%;left:14%;z-index:0;
+    }
+    .square-box div{
+        width:88px;height:88px;
+    }
+    .square-box div:nth-child(1){
+        background:#33bb9a;margin:0 70px;
+    }
+    .square-box div:nth-child(2){
+        background:#29a2b8;margin:0 -18px;float:left;
+    }
+    .square-box div:nth-child(3){
+        background:#60cf6e;float:left;margin:0 106px;
+    }
+    .square-box div:nth-child(4){
+        background:#33bb9a;float:left;margin-left:246px;
+    }
+    .square-box div:nth-child(5){
+        width:176px;height:176px;margin-top:88px;
+        margin-left:70px;
+        background:url("../img/square.jpg");
+    }
+    .circle{
+        width:280px;height:250px;position:absolute;left:12%;top:22%;
+        background:url("../img/circle.png") no-repeat;
+    }
+    .jiantou{
+        width:30px;height:26px;position:absolute;bottom:40px;right:0;left:0;margin:auto;
+        animation:jiantou 1s linear 0.5s infinite alternate;cursor:pointer;
+    }
+    ul{
+        width:32px;height:100px;position:fixed;top:0;bottom:0;
+        right:30px;margin:auto;list-style: none;
+    }
+    ul li{
+        width:10px;height:10px;border-radius:100%;border:1px solid #bce8f1;margin-left:-20px;margin-top:10px;
+    }
+    .active{
+        height:20px;background:#bce8f1;
+    }
+
 
 }

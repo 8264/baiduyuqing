@@ -19,6 +19,8 @@ $(function(){
         }
         flag=false;
         $("#fullpage").css("margin-top",-num*clientH);
+        $("ul li").removeClass("active");
+        $("ul li").eq(num).addClass("active");
     });
 
     touch.on("body","swipedown","#fullpage",function(){
@@ -32,7 +34,10 @@ $(function(){
         }
         flag=false;
         $("#fullpage").css("margin-top",-num*clientH);
+        $("ul li").removeClass("active");
+        $("ul li").eq(num).addClass("active");
     });
+    /*监听过渡（transition）完成的事件*/
     $("#fullpage")[0].addEventListener("webkitTransitionEnd",function(){
         flag=true;
     });
@@ -103,6 +108,24 @@ $(function(){
             });
             flag2=true;
         }
+    })
+/*箭头翻页按钮*/
+   touch.on("body","tap",".jiantou",function(){
+       num++;
+       $("#fullpage").css({
+           "margin-top":-num*clientH,
+       })
+       $("ul li").removeClass("active");
+       $("ul li").eq(num).addClass("active");
+   })
+/*轮播点*/
+    touch.on("body","tap","ul li",function(){
+        var index=$("ul li").index(this);
+        $("ul li").removeClass("active");
+        $(this).addClass("active");
+        $("#fullpage").css({
+            "margin-top":-index*clientH,
+        })
     })
 
 
